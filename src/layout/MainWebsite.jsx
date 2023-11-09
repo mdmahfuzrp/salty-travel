@@ -6,7 +6,9 @@ const MainWebsite = () => {
   return (
     <div className="">
       <Navbar />
-      <Outlet />
+      <div className="w-full px-5 mx-auto max-w-[1300px] my-[80px] mb-[50px]">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );
