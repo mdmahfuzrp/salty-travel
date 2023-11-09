@@ -6,3 +6,45 @@ body, html{
     background: #FAF8ED;
     color: #2D3134;
 }
+
+.mouseLoader {
+    width: 23px;
+    height: 35px;
+    position: relative;
+  }
+  
+  .mouseLoader::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50% , 50%);
+    width: 9px;
+    height: 9px;
+    background: #bcbaba;
+    border-radius: 50%;
+    animation: bounce 1s ease-in infinite alternate;
+  }
+  .mouseLoader::after {
+    content: '';
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 23px;
+    height: 35px;
+    box-sizing: border-box;
+    border: 2px solid #c0c0c0;
+    border-radius: 50% 50% 50% 50% / 25% 25% 25% 25%;
+    animation: kick 1s ease-in infinite alternate;
+  }
+  
+  @keyframes bounce {
+    0% {
+      top: 5%;
+      opacity: 1;
+    }
+    100% {
+      top: 45%;
+      opacity: 0.7;
+    }
+  }
